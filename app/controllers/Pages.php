@@ -1,6 +1,6 @@
 <?php
 
-class Pages
+class Pages extends Controller
 {
     public function __construct()
     {
@@ -9,6 +9,15 @@ class Pages
 
     public function index()
     {
-        echo 'pages controller loaded';
+//        $data = [
+//            'article' => 'mvc',
+//            'author' => 'amir'
+//        ];
+//        $this->view('pages/index', $data);
+    }
+
+    public function edit($id)
+    {
+        echo $id;
     }
 }
