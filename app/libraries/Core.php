@@ -1,4 +1,9 @@
 <?php
+/*
+ * App Core Class
+ * Reaching the controller via URL
+ * URL Format => controller/method/param
+ */
 
 class Core
 {
@@ -19,6 +24,21 @@ class Core
 
         //init the controller
         $this->currentController = new $this->currentController;
+
+        //check second part of url
+        if (isset($url[1])) {
+            //check exists method in the controller
+            if (method_exists($this->currentController, $url[1])) {
+                $this->currentMethod = $url[1];
+                unset($url[1]);
+            }
+        }
+
+        //get parameters from url(if exists)
+        $this->params = $url ? array_values($url) : [];
+
+        //send parameters to method(call a callback with array of parameters)
+        call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
     }
 
     public function getUrl()

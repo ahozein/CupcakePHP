@@ -4,6 +4,16 @@ class Articles
 {
     public function __construct()
     {
-        echo 'test for article load';
+
+    }
+
+    public function index()
+    {
+        echo 'article controller loaded';
+    }
+
+    public function edit($id)
+    {
+        echo $id;
     }
 }

@@ -4,6 +4,11 @@ class Pages
 {
     public function __construct()
     {
-        echo 'test for pages load';
+
+    }
+
+    public function index()
+    {
+        echo 'pages controller loaded';
     }
 }
