@@ -1,0 +1,3 @@
+#This "(-)indexes" closes access to the directory that the .htaccess file is in
+# "indexes" without "-" still shows directory that the .htaccess file is in !
+Options -Indexes
