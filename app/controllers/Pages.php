@@ -9,11 +9,11 @@ class Pages extends Controller
 
     public function index()
     {
-//        $data = [
-//            'article' => 'mvc',
-//            'author' => 'amir'
-//        ];
-//        $this->view('pages/index', $data);
+        $data = [
+            'article' => 'mvc',
+            'author' => 'amir'
+        ];
+        $this->view('pages/index', $data);
     }
 
     public function edit($id)
