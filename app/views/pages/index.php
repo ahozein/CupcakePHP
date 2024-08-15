@@ -11,7 +11,7 @@
         <p>CupcakePHP is a lightweight and simple mini-framework based on the MVC (Model-View-Controller)
             architecture !</p>
 
-        <a href="#" class="btn btn-secondary">login</a>
+        <a href="<?php echo URL_ROOT . 'users/login' ?>" class="btn btn-secondary">login</a>
 
     </main>
 

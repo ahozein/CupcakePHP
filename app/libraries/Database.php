@@ -39,9 +39,9 @@ class Database
     }
 
     //Bind value
-    public function bind($param, $value, $type = null)
+    public function bind($param, $value)
     {
-        $this->stmt->bindParam($param, $value, $type);
+        $this->stmt->bindParam($param, $value);
     }
 
     //Execute the prepared statement
